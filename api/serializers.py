@@ -1,4 +1,3 @@
-from dataclasses import fields
 from rest_framework import serializers
 from .models import Work, WorkType, Stock, Reminder, Record
 from django.contrib.auth.models import User
@@ -59,3 +58,10 @@ class RecordSerializer(serializers.ModelSerializer):
         model = Record
         fields = ('id', 'work', 'workname', 'typeid',
                   'typename', 'num', 'created_at')
+
+
+class ReminderSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Record
+        fields = ()
