@@ -58,10 +58,3 @@ class RecordSerializer(serializers.ModelSerializer):
         model = Record
         fields = ('id', 'work', 'workname', 'typeid',
                   'typename', 'num', 'created_at')
-
-
-class ReminderSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Record
-        fields = ()
