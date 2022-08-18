@@ -51,8 +51,10 @@ class RecordSerializer(serializers.ModelSerializer):
     typeid = serializers.IntegerField(read_only=True, source='work.type.id')
     typename = serializers.CharField(read_only=True, source='work.type.name')
 
+    # created_at = serializers.DateTimeField(
+    #     format="%Y-%m-%d %H:%M:%S", read_only=True)
     created_at = serializers.DateTimeField(
-        format="%Y-%m-%d %H:%M:%S", read_only=True)
+        format="%Y-%m-%d", read_only=True)
 
     class Meta:
         model = Record
